@@ -8,13 +8,15 @@
     "dependencies": {
         "@sap/cds": "^6",
         "express": "^4",
-        "hdb": "^0.19.0"
+        "hdb": "^0.19.0",
+        "@sap/cds-odata-v2-adapter-proxy": "^1.8.5"
     },
     "devDependencies": {
         "sqlite3": "^5.0.4"
     },
     "scripts": {
-        "start": "cds run"
+        "start": "cds run",
+        "watch": "npx cds watch"
     },
     "engines": {
         "node": "^16.15"
@@ -47,8 +49,11 @@
     "cds": {
         "requires": {
             "db": {
-                "kind": "hana-cloud"
+                "kind": "sql"
             }
+        },
+        "hana": {
+            "deploy-format": "hdbtable"
         }
     }
 }
