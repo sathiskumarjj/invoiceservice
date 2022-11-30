@@ -27,7 +27,7 @@ stages:
     cfSpace: "dev"
     cfAppName: "invoiceservice"
     cfCredentialsId: "deploy-to-cf"
-    tmsUpload: true
+    tmsUpload: false
 
 steps:
   artifactPrepareVersion:
